@@ -7,7 +7,15 @@
     <script type="text/javascript" src="../lib/knockoutJS/knockout-3.5.1.js"></script>
 </head>
 <body>
-    <p>First name: <strong data-bind="text: firstName"></strong></p>
+    <p>
+        <label for="firstName">First name:</label>
+        <input type="text" name="firstName" id="firstName" data-bind="value: firstName" />
+    </p>
+    <p>
+        <label for="secondName">First name:</label>
+        <input type="text" name="secondName" id="secondName" data-bind="value: secondName" />
+    </p>
+    <p>First name <strong data-bind="text: firstName"></strong></p>
     <p>Second name: <strong data-bind="text: secondName"></strong></p>
 </body>
 </html>
