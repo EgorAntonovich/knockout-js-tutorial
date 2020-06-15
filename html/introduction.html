@@ -12,12 +12,15 @@
         <input type="text" name="firstName" id="firstName" data-bind="value: firstName" />
     </p>
     <p>
-        <label for="secondName">First name:</label>
+        <label for="secondName">Last name:</label>
         <input type="text" name="secondName" id="secondName" data-bind="value: secondName" />
     </p>
     <p>First name <strong data-bind="text: firstName"></strong></p>
-    <p>Second name: <strong data-bind="text: secondName"></strong></p>
+    <p>Last name: <strong data-bind="text: secondName"></strong></p>
     <p>Full name: <strong data-bind="text: fullName"></strong></p>
+    <button data-bind="click: capitalizeLastName">Go Caps</button>
+    <button data-bind="click: makeLowerCase">Go Lower</button>
+    <button data-bind="click: makeLowerCase">Go Standart</button>
 </body>
 </html>
 <script type="text/javascript" src="../js/introduction.js"></script>
