@@ -1,6 +1,6 @@
 function AppViewModel(){
-    this.firstName = "Egor";
-    this.secondName = "Antonovich";
+    this.firstName = ko.observable("Egor");
+    this.secondName = ko.observable("Antonovich");
 }
 
 ko.applyBindings(new AppViewModel());
