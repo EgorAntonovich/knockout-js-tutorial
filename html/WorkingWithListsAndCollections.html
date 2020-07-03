@@ -17,9 +17,17 @@
         </thead>
         <tbody data-bind="foreach: seats">
             <tr>
-                <td data-bind="text: name"></td>
-                <td data-bind="text: meal().mealName"></td>
-                <td data-bind="text: meal().price"></td>
+                <td>
+                    <label>
+                        <input data-bind="value: name">
+                    </label>
+                </td>
+                <td>
+                    <label>
+                        <select data-bind="options: $root.availableMeals, value: meal, optionsText: 'mealName'"></select>
+                    </label>
+                </td>
+                <td data-bind="text: formattedPrice"></td>
             </tr>
         </tbody>
     </table>
