@@ -7,6 +7,12 @@
     <script type="text/javascript" src="../lib/knockoutJS/knockout-3.5.1.debug.js"></script>
 </head>
 <body>
+    <h2>
+        Your seat reservation
+    </h2>
+    <h3 data-bind="visible: totalSurcharge() > 0">
+        Total surcharge: $<span data-bind="text: totalSurcharge().toFixed(2)"></span>
+    </h3>
     <table>
         <thead>
             <tr>
@@ -28,6 +34,9 @@
                     </label>
                 </td>
                 <td data-bind="text: formattedPrice"></td>
+                <td>
+                    <a href="#" data-bind="click: $root.removeSeat">Remove</a>
+                </td>
             </tr>
         </tbody>
     </table>

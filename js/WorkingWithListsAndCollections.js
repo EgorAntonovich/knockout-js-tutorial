@@ -27,10 +27,23 @@ function ReservationsViewModel(){
         new SeatReservation("Bob", self.availableMeals[0])
     ]);
 
+    self.totalSurcharge = ko.computed(function(){
+        var total = 0;
+        for(var i = 0; i < self.seats().length; i++)
+        {
+            total += self.seats()[i].meal().price;
+        }
+        return total;
+    });
+
     // Operations
     self.addSeat = function (){
         self.seats.push(new SeatReservation("Egor", self.availableMeals[2])
     )};
+
+    self.removeSeat = function(seat){
+        self.seats.remove(seat);
+    };
 }
 
 ko.applyBindings(new ReservationsViewModel());
