@@ -8,7 +8,7 @@
 </head>
 <body>
     <h2>
-        Your seat reservation
+        Your seat reservation (<span data-bind="text: seats().length"></span>)
     </h2>
     <h3 data-bind="visible: totalSurcharge() > 0">
         Total surcharge: $<span data-bind="text: totalSurcharge().toFixed(2)"></span>
@@ -40,7 +40,7 @@
             </tr>
         </tbody>
     </table>
-    <button data-bind="click: addSeat">Add new reservation</button>
+    <button data-bind="click: addSeat, enable: seats().length < 5">Add new reservation</button>
 </body>
 </html>
 <script type="text/javascript" src="../js/WorkingWithListsAndCollections.js"></script>
