@@ -9,7 +9,9 @@
 </head>
 <body>
     <ul class="folders" data-bind="foreach: folders">
-        <li data-bind="text: $data"></li>
+        <li data-bind="text: $data,
+                       css: {selected: $data == $root.chosenFolderId()},
+                       click: $root.goToFolder"></li>
     </ul>
 </body>
 </html>
