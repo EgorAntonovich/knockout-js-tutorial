@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SinglePageApp</title>
+    <script type="text/javascript" src="../lib/knockoutJS/knockout-3.5.1.js"></script>
+    <script type="text/javascript" src="../lib/knockoutJS/knockout-3.5.1.debug.js"></script>
+    <link rel="stylesheet" href="http://learn.knockoutjs.com/Content/TutorialSpecific/webmail.css" />
+</head>
+<body>
+    <ul class="folders" data-bind="foreach: folders">
+        <li data-bind="text: $data,
+                       css: {selected: $data == $root.chosenFolderId()},
+                       click: $root.goToFolder"></li>
+    </ul>
+</body>
+</html>
+<script type="text/javascript" src="../js/SinglePageApp.js"></script>
